@@ -1,9 +1,12 @@
 ﻿using System;
 using CoreGraphics;
 using SharpPaintCode.Controls;
+using SharpPaintCode.iOS.Controls;
 using SharpPaintCode.iOS.Controls.Native;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
+[assembly: ExportRenderer(typeof(SharpView), typeof(SharpViewRenderer))]
 namespace SharpPaintCode.iOS.Controls
 {
     public class SharpViewRenderer : ViewRenderer<SharpView, UISharpView>
