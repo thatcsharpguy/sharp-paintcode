@@ -5,5 +5,13 @@ namespace SharpPaintCode.Controls
 {
     public class SharpView : View
     {
+        public static readonly BindableProperty FillColorProperty =
+            BindableProperty.Create(nameof(FillColor), typeof(Color), typeof(SharpView), default(Color));
+
+        public Color FillColor
+        {
+            get { return (Color)GetValue(FillColorProperty); }
+            set { SetValue(FillColorProperty, value); }
+        }
     }
 }
