@@ -18,6 +18,8 @@ namespace SharpPaintCode.Controls
         {
             BackgroundColor = Color.Transparent;
             HorizontalOptions = LayoutOptions.Center;
+            WidthRequest = 150;
+            HeightRequest = 150;
         }
     }
 }
