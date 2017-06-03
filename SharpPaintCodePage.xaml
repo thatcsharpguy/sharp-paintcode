@@ -1,4 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SharpPaintCode" x:Class="SharpPaintCode.SharpPaintCodePage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:SharpPaintCode" 
+    xmlns:controls="clr-namespace:SharpPaintCode.Controls" 
+    x:Class="SharpPaintCode.SharpPaintCodePage">
+    <StackLayout>
+        <controls:SharpView x:Name="Sharp1" FillColor="Olive" />
+        <controls:SharpView x:Name="Sharp2" Margin="10" FillColor="Red" WidthRequest="200" />
+        <Button Text ="Next colors" Clicked="NextColorsButtonClicked" />
+    </StackLayout>
 </ContentPage>
