@@ -13,5 +13,11 @@ namespace SharpPaintCode.Controls
             get { return (Color)GetValue(FillColorProperty); }
             set { SetValue(FillColorProperty, value); }
         }
+
+        public SharpView()
+        {
+            BackgroundColor = Color.Transparent;
+            HorizontalOptions = LayoutOptions.Center;
+        }
     }
 }
