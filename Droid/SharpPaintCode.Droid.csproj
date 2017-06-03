@@ -94,6 +94,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controls\Native\SharpView.cs" />
     <Compile Include="Controls\Native\SharpKit.cs" />
+    <Compile Include="Controls\SharpViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
