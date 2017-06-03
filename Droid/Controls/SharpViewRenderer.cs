@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using SharpPaintCode.Droid.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -22,6 +23,18 @@ namespace SharpPaintCode.Droid.Controls
                     native.FillColor = Element.FillColor.ToAndroid();
                     SetNativeControl(native);
                 }
+            }
+        }
+
+        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals(nameof(FormsSharpView.FillColor)))
+            {
+                Control.FillColor = Element.FillColor.ToAndroid();
+            }
+            else
+            {
+                base.OnElementPropertyChanged(sender, e);
             }
         }
     }

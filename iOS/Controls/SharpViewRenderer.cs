@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using CoreGraphics;
 using SharpPaintCode.Controls;
 using SharpPaintCode.iOS.Controls;
@@ -24,6 +25,18 @@ namespace SharpPaintCode.iOS.Controls
                     native.FillColor = Element.FillColor.ToUIColor();
                     SetNativeControl(native);
                 }
+            }
+        }
+
+        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName.Equals(nameof(SharpView.FillColor)))
+            {
+                Control.FillColor = Element.FillColor.ToUIColor();
+            }
+            else
+            {
+                base.OnElementPropertyChanged(sender, e);
             }
         }
     }
