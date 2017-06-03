@@ -21,6 +21,7 @@ namespace SharpPaintCode.iOS.Controls
                 {
                     var sharpFrame = new CGRect(0, 0, Element.WidthRequest, Element.HeightRequest);
                     var native = new UISharpView(sharpFrame);
+                    native.FillColor = Element.FillColor.ToUIColor();
                     SetNativeControl(native);
                 }
             }
