@@ -34,5 +34,12 @@ namespace SharpPaintCode.Droid.Controls.Native
         }
 
         #endregion
+
+        #region Drawing
+        protected override void OnDraw(Canvas canvas)
+        {
+            SharpKit.DrawSharpCanvas(canvas, _fillColor.ToArgb(), Width, Height);
+        }
+        #endregion
     }
 }
