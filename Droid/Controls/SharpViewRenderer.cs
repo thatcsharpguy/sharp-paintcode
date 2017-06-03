@@ -10,6 +10,19 @@ namespace SharpPaintCode.Droid.Controls
 {
     public class SharpViewRenderer : ViewRenderer<FormsSharpView, NativeSharpView>
     {
+        protected override void OnElementChanged(ElementChangedEventArgs<FormsSharpView> e)
+        {
+            base.OnElementChanged(e);
 
+            if (e.NewElement != null)
+            {
+                if (Control == null)
+                {
+                    var native = new NativeSharpView(Context);
+                    native.FillColor = Element.FillColor.ToAndroid();
+                    SetNativeControl(native);
+                }
+            }
+        }
     }
 }
